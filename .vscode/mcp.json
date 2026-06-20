@@ -15,43 +15,12 @@
   },
   "production": {
     "balanceAPI": {
-      "baseURL": "https://your-real-api.example.com",
-      "endpoint": "/api/balance",
-      "method": "POST",
+      "baseURL": "http://ocsg-test.internal.company.com:8080",
+      "endpoint": "/ocsg/rest/v1/subscriber/${msisdn}/balance",
+      "method": "GET",
       "headers": {
         "Authorization": "Bearer YOUR_API_TOKEN_HERE",
         "Content-Type": "application/json"
-      },
-      "requestBody": {
-        "PIN_FLD_POID": "0.0.0.1 /account ${accountId} 0",
-        "PIN_FLD_PROGRAM_NAME": "bal_query_subscription",
-        "PIN_FLD_FLAGS": 0,
-        "PIN_FLD_ACCOUNT_OBJ": "0.0.0.1 /account ${accountId} 0",
-        "PIN_FLD_BILLINFO_OBJ": "0.0.0.1 /billinfo ${billinfoId} 0",
-        "PIN_FLD_SERVICE_OBJ": "0.0.0.1 /service/telco/gsm ${serviceId} 0",
-        "PIN_FLD_BAL_GRP_OBJ": "0.0.0.1 /balance_group ${balanceGroupId} 0",
-        "PIN_FLD_BALANCES": {
-          "840": {
-            "PIN_FLD_RESOURCE_ID": 840,
-            "PIN_FLD_CURRENT_BAL": 0,
-            "PIN_FLD_CREDIT_LIMIT": 0
-          },
-          "1000011": {
-            "PIN_FLD_RESOURCE_ID": 1000011,
-            "PIN_FLD_CURRENT_BAL": 0,
-            "PIN_FLD_CREDIT_LIMIT": 0
-          },
-          "1000012": {
-            "PIN_FLD_RESOURCE_ID": 1000012,
-            "PIN_FLD_CURRENT_BAL": 0,
-            "PIN_FLD_CREDIT_LIMIT": 0
-          },
-          "1000013": {
-            "PIN_FLD_RESOURCE_ID": 1000013,
-            "PIN_FLD_CURRENT_BAL": 0,
-            "PIN_FLD_CREDIT_LIMIT": 0
-          }
-        }
       },
       "responseMapping": {
         "subscriptionId": "subscriptionId",
